@@ -1,0 +1,214 @@
+$popins-font: "Poppins", sans-serif;
+$inter-font: "Inter", sans-serif;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px;
+}
+
+.cards {
+    display: flex;
+
+    .card1 {
+        flex: 1;
+
+        height: 100vh;
+        max-width: 100%;
+        background-image: url(../images/Paste\ image.svg);
+        background-size: cover;
+        background-position-x: center;
+        background-position-y: center;
+        background-repeat: no-repeat;
+
+
+
+        &__text p {
+            font-family: $popins-font;
+            font-size: 2.4rem;
+            font-weight: 500;
+            display: flex;
+            justify-content: center;
+            margin-top: 32px;
+        }
+    }
+
+    .card2 {
+        flex: 1;
+
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        input[type=submit] {
+            max-width: 456px;
+
+
+            margin-top: 3.2rem;
+            margin-bottom: 4rem;
+
+            background-color: #141718;
+            color: #FFFFFF;
+            font-family: $inter-font;
+            font-size: 1.6rem;
+            font-weight: 500;
+            border-style: none;
+            border-radius: 8px;
+            padding: 1rem 10rem;
+            display: flex;
+            justify-content: center;
+            cursor: pointer;
+        }
+
+        input {
+            outline: none;
+        }
+
+        input:focus {
+            border-bottom: 1px solid blue;
+        }
+
+        &__container {
+            width: 65%;
+            margin-right: 80px;
+        }
+
+        flex-direction: column;
+
+        &__forms {
+            display: flex;
+            flex-direction: column;
+            gap: 32px;
+
+            input {
+                border-style: none;
+                border-bottom: 1px solid #E8ECEF;
+                padding-bottom: 7px;
+                padding-top: 7px;
+                font-family: $inter-font;
+                font-weight: 400;
+                color: #6C7275;
+                display: flex;
+                align-items: center;
+
+                ::placeholder {
+                    display: flex;
+                    align-items: center;
+                }
+            }
+
+            .card2__password {
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+
+                span {
+                    cursor: pointer;
+                }
+
+                input[type=password] {
+                    width: 100%;
+                }
+            }
+
+            .card2__forms__checkbox {
+                display: flex;
+                align-items: center;
+                gap: 12px;
+                font-family: $inter-font;
+                font-size: 1.6rem;
+                color: #6C7275;
+
+                span {
+                    color: #141718;
+                    font-weight: 600;
+                }
+
+                input {
+                    width: 24px;
+                    height: 24px;
+                    border: 5px #6C7275;
+                    border-width: 5px;
+                    border: 5px solid;
+
+
+                }
+
+            }
+
+        }
+
+        &__header {
+            h1 {
+                font-family: $popins-font;
+                font-weight: 500;
+                font-size: 4rem;
+                color: #141718;
+                margin-bottom: 24px;
+            }
+
+            p {
+                font-family: $inter-font;
+                font-weight: 400;
+                font-size: 1.6rem;
+                color: #6C7275;
+                margin-bottom: 25px;
+
+                a {
+                    text-decoration: none;
+                    color: #38CB89;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 850px) {
+    .cards .card1 {
+        background-image: none;
+        background-color: #a8b1b57b;
+    }
+    html{
+        font-size: 8px;
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    .cards {
+        flex-direction: column;
+    }
+
+    .card2 input[tupe=submit] {
+        margin-top: 20px;
+        padding: 3rem ;
+
+    }
+
+    .cards .card1 {
+        background-image: url(../images/Paste\ image.svg);
+        margin-bottom: 40px;
+
+        p {
+            padding-bottom: 400px;
+        }
+    }
+
+    .cards .card2 .card2__container {
+        width: 80%;
+        margin-right: 0;
+        input[type="submit"]{
+            padding: 3rem;
+        }
+
+    }
+
+    html {
+        font-size: 6.5px;
+    }
+}
